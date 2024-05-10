@@ -1,5 +1,7 @@
 @use "./reset"; // reset
 @use "utilities" as utils; // fonts, colors & animations
+@use "components" as components; // components
+@use "./large";
 
 :root {
   --first-font-regular: "Cinzel--regular";
@@ -9,9 +11,4 @@
   --second-font-regular: "Raleway--regular";
   --second-font-bold: "Raleway--bold";
   --second-font-black: "Raleway--black";
-}
-
-body {
-  font-family: var(--second-font-light);
-  color: utils.$gold;
 }

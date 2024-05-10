@@ -47,6 +47,79 @@
   font-style: normal;
   font-display: swap;
 }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--second-font-bold);
+  font-size: 1.6rem;
+  background-color: #232323;
+  color: #fff;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1.5em;
+  border: 2px solid transparent;
+  background-color: transparent;
+  z-index: 100;
+  cursor: pointer;
+}
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::before, .burger-btn__bars::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 300ms linear;
+}
+.burger-btn__bars {
+  top: 0;
+  width: 100%;
+}
+.burger-btn__bars::before {
+  top: 13px;
+  width: 60%;
+  transition-delay: 100ms;
+}
+.burger-btn__bars::after {
+  top: 27px;
+  width: 30%;
+  transition-delay: 200ms;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+.burger-btn:hover .burger-btn__bars::before,
+.burger-btn:hover .burger-btn__bars::after {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    top: 40px;
+    right: 40px;
+  }
+}
 :root {
   --first-font-regular: "Cinzel--regular";
   --first-font-bold: "Cinzel--bold";
@@ -55,9 +128,4 @@
   --second-font-regular: "Raleway--regular";
   --second-font-bold: "Raleway--bold";
   --second-font-black: "Raleway--black";
-}
-
-body {
-  font-family: var(--second-font-light);
-  color: #d6c78e;
 }/*# sourceMappingURL=main.css.map */

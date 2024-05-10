@@ -1,0 +1,9 @@
+@mixin burgerBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1.5em;
+  border: 2px solid transparent;
+  background-color: transparent;
+  z-index: 100;
+}
