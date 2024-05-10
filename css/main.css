@@ -1,48 +1,48 @@
 @font-face {
   font-family: "Cinzel--regular";
-  src: url("../assets/fonts/Cinzel-Regular.woff") format("woff");
+  src: url("../../assets/fonts/Cinzel-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Cinzel--bold";
-  src: url("../assets/fonts/Cinzel-Bold.woff") format("woff");
+  src: url("../../assets/fonts/Cinzel-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Raleway--extralight";
-  src: url("../assets/fonts/Raleway-ExtraLight.woff") format("woff");
+  src: url("../../assets/fonts/Raleway-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Raleway--light";
-  src: url("../assets/fonts/Raleway-Light.woff") format("woff");
+  src: url("../../assets/fonts/Raleway-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Raleway--regular";
-  src: url("../assets/fonts/Raleway-Regular.woff") format("woff");
+  src: url("../../assets/fonts/Raleway-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Raleway--bold";
-  src: url("../assets/fonts/Raleway-Bold.woff") format("woff");
+  src: url("../../assets/fonts/Raleway-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Raleway--black";
-  src: url("../assets/fonts/Raleway-Black.woff") format("woff");
+  src: url("../../assets/fonts/Raleway-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -58,5 +58,6 @@
 }
 
 body {
-  font-family: var(--second-font-regular);
+  font-family: var(--second-font-light);
+  color: #d6c78e;
 }/*# sourceMappingURL=main.css.map */

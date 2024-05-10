@@ -1,5 +1,5 @@
-@use "./reset";
-@use "./fonts";
+@use "./reset"; // reset
+@use "utilities" as utils; // fonts, colors & animations
 
 :root {
   --first-font-regular: "Cinzel--regular";
@@ -12,5 +12,6 @@
 }
 
 body {
-  font-family: var(--second-font-regular);
+  font-family: var(--second-font-light);
+  color: utils.$gold;
 }
