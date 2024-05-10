@@ -1,0 +1,11 @@
+Czcionki do projektu:
+
+1: "Cinzel"
+- Regular 400
+- Bold 700
+
+2: "Raleway"
+- Extra-light 200
+- Regular 400
+- Bold 700
+- Black 900

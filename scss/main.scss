@@ -1,0 +1,16 @@
+@use "./reset";
+@use "./fonts";
+
+:root {
+  --first-font-regular: "Cinzel--regular";
+  --first-font-bold: "Cinzel--bold";
+  --second-font-extralight: "Raleway--extralight";
+  --second-font-light: "Raleway--light";
+  --second-font-regular: "Raleway--regular";
+  --second-font-bold: "Raleway--bold";
+  --second-font-black: "Raleway--black";
+}
+
+body {
+  font-family: var(--second-font-regular);
+}
