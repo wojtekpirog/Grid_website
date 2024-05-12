@@ -71,47 +71,148 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  padding: 1.5em;
-  border: 2px solid transparent;
+  display: inline-block;
+  padding: 20px;
   background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
   z-index: 100;
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
   cursor: pointer;
 }
-.burger-btn__box {
-  position: relative;
-  width: 40px;
-  height: 30px;
-}
-.burger-btn__bars, .burger-btn__bars::before, .burger-btn__bars::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  height: 3px;
-  background-color: #fff;
-  transition: width 300ms linear;
-}
-.burger-btn__bars {
-  top: 0;
-  width: 100%;
-}
-.burger-btn__bars::before {
-  top: 13px;
-  width: 60%;
-  transition-delay: 100ms;
-}
-.burger-btn__bars::after {
-  top: 27px;
-  width: 30%;
-  transition-delay: 200ms;
+.burger-btn:hover {
+  opacity: 0.7;
 }
 .burger-btn:focus {
   outline: none;
-  border: 2px solid #fff;
-  border-radius: 8px;
+  border-color: #fff;
 }
-.burger-btn:hover .burger-btn__bars::before,
-.burger-btn:hover .burger-btn__bars::after {
+.burger-btn.is-active:hover {
+  opacity: 0.7;
+}
+.burger-btn.is-active .burger-btn__inner,
+.burger-btn.is-active .burger-btn__inner::before,
+.burger-btn.is-active .burger-btn__inner::after {
+  background-color: #232323;
+}
+.burger-btn__box {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__inner, .burger-btn__inner::before, .burger-btn__inner::after {
+  position: absolute;
+  right: 0;
+  display: block;
   width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.burger-btn__inner::before, .burger-btn__inner::after {
+  content: "";
+}
+.burger-btn__inner::before {
+  top: 13px;
+}
+.burger-btn__inner::after {
+  top: 27px;
+}
+.burger-btn.animation .burger-btn__box {
+  perspective: 80px;
+}
+.burger-btn.animation .burger-btn__inner {
+  transition: transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.burger-btn.animation .burger-btn__inner::before, .burger-btn.animation .burger-btn__inner::after {
+  transition: transform 0s 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: #fff;
+}
+.burger-btn.animation.is-active .burger-btn__inner {
+  background-color: transparent;
+  transform: rotateY(180deg);
+}
+.burger-btn.animation.is-active .burger-btn__inner::before {
+  transform: translateY(-13px) rotate(45deg);
+}
+.burger-btn.animation.is-active .burger-btn__inner::after {
+  transform: translateY(-27px) rotate(-45deg);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.header nav.nav-desktop {
+  display: none;
+}
+.header .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.header__text {
+  display: grid;
+  align-content: center;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 2em;
+}
+.header__text h1.company-name {
+  margin-bottom: 0.5em;
+  font-family: var(--first-font-regular);
+  font-size: 3rem;
+  color: #d6c78e;
+}
+.header__text p.company-description {
+  font-family: var(--second-font-light);
+}
+.header__img {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-image: url("../../assets/images/bitcoin-hero-desktop.jpg");
+  background-position: center 35%;
+  background-size: cover;
+  filter: brightness(0.8) sepia();
+}
+.header__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header__arrow {
+  display: none;
+}
+.header__background-icon {
+  position: absolute;
+  opacity: 0.1;
+  z-index: -1;
+  animation-name: rotate-right;
+  animation-duration: 55s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.header__background-icon--first {
+  bottom: 2em;
+  right: -3em;
+  width: 50%;
+}
+.header__background-icon--second {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {

@@ -8,15 +8,70 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- Burger -->
-  <button type="button" class="burger-btn">
-    <!-- Box -->
-    <div class="burger-btn__box">
-      <div class="burger-btn__bars"></div>
+  <!-- Header -->
+  <header class="header">   
+    <!-- Navigation -->
+    <nav class="nav nav-desktop">
+      <!-- List Mobile -->
+      <ul class="nav__list-mobile">
+        <a href="#invest" class="nav__link">Invest</a>
+        <a href="#plan" class="nav__link">Plan</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </ul>
+      <!-- List Mobile -->
+    </nav>
+      <!-- Navigation -->
+      <!-- Navigation -->
+    <nav class="nav nav-mobile">  
+      <!-- List Desktop -->
+      <ul class="nav__list-desktop">
+        <a href="#invest" class="nav__link">Invest</a>
+        <a href="#plan" class="nav__link">Plan</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </ul>
+      <!-- List Desktop -->
+      <!-- Burger -->
+      <button type="button" class="burger-btn animation">
+        <!-- Box -->
+        <span class="burger-btn__box">
+          <span class="burger-btn__inner"></span>
+        </span>
+        <!-- Box -->
+      </button>
+      <!-- Burger -->
+    </nav>
+    <!-- Navigation -->
+    <!-- Text -->
+    <div class="header__text">
+      <h1 class="company-name">Diamonds, Gold & Money</h1>
+      <p class="company-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nemo fugiat earum voluptate excepturi quos architecto, aliquam quidem voluptatibus porro!</p>
     </div>
-    <!-- Box -->
-  </button>
-  <!-- Burger -->
+    <!-- Text -->
+    <!-- Image -->
+    <div class="header__img">
+      <div class="header__shadow"></div>
+    </div>
+    <!-- Image -->
+    <!-- Link to cards -->
+    <a href="#cards" class="header__link">
+      <div class="header__arrow">
+        <img src="./assets/icons/arrow-down.svg" alt="">
+      </div>
+    </a>
+    <!-- Link to cards -->
+    <!-- Square Img -->
+    <img src="./assets/icons/square.svg" class="header__background-icon header__background-icon--first" alt="">
+    <!-- Square Img -->
+    <!-- Square Img -->
+    <img src="./assets/icons/square.svg" class="header__background-icon header__background-icon--second" alt="">
+    <!-- Square Img -->
+  </header>
+  <!-- Header -->
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> DG&M Company </p>
+  </footer>
+  <!-- Footer -->
   <script src="./js/main.js"></script>
 </body>
 

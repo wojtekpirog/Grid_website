@@ -1,0 +1,84 @@
+// @use "../utilities/colors" as colors;
+@use "../utilities/colors" as colors;
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  nav.nav-desktop {
+    display: none;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  &__text {
+    display: grid;
+    align-content: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 2em; 
+    
+    h1.company-name {
+      margin-bottom: .5em;
+      font-family: var(--first-font-regular);
+      font-size: 3rem;
+      color: colors.$gold;
+    }
+
+    p.company-description {
+      font-family: var(--second-font-light);
+    }
+  }
+
+  &__img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("../../assets/images/bitcoin-hero-desktop.jpg");
+    background-position: center 35%;
+    background-size: cover;
+    filter: brightness(0.8) sepia();
+  }
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  &__arrow {
+    display: none;
+  }
+
+  &__background-icon {
+    position: absolute;
+    opacity: .1;
+    z-index: -1;
+    animation-name: rotate-right;
+    animation-duration: 55s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &--first {
+      bottom: 2em;
+      right: -3em;
+      width: 50%;
+    }
+
+    &--second {
+      display: none;
+    }
+  }
+}
