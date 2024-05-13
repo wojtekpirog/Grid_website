@@ -26,14 +26,14 @@
   }
 
   &.is-active {
-    &:hover {
-      opacity: .7;
-    }
-
     .burger-btn__inner,
     .burger-btn__inner::before,
     .burger-btn__inner::after {
       background-color: colors.$dark;
+    }
+
+    &:hover {
+      opacity: .7;
     }
   }
 
@@ -85,14 +85,18 @@
     &.is-active {
       .burger-btn__inner {
         background-color: transparent;
-        transform: rotateY(180deg);
+
+        &::before,
+        &::after {
+          background-color: colors.$darker;
+        }
 
         &::before {
-          transform: translateY(-13px) rotate(45deg);
+          transform: rotate(45deg);
         }
 
         &::after {
-          transform: translateY(-27px) rotate(-45deg);
+          transform: translateY(-13px) rotate(-45deg)
         }
       }
     }
