@@ -1,6 +1,7 @@
 @use "./reset"; // reset
-@use "utilities" as utils; // fonts, colors & animations
-@use "components" as components; // components
+@use "utilities"; // fonts, colors & animations
+@use "components"; // components
+@use "./small";
 @use "./medium";
 @use "./large";
 
