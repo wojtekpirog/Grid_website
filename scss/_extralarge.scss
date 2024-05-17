@@ -1,0 +1,9 @@
+@media screen and (min-width: 1200px) {
+  .header {
+    &__text {
+      p.company-description {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

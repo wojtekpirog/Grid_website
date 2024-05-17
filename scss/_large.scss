@@ -49,6 +49,10 @@
     &__text {
       grid-row: 2 / 4;
       grid-column: 1 / 2;
+
+      h1.company-name {
+        font-size: 5rem;
+      }
       
       p.company-description {
         font-size: 1.8rem;

@@ -332,6 +332,9 @@ body {
     grid-row: 2/4;
     grid-column: 1/2;
   }
+  .header__text h1.company-name {
+    font-size: 5rem;
+  }
   .header__text p.company-description {
     font-size: 1.8rem;
   }
@@ -371,6 +374,11 @@ body {
     left: 14em;
     top: 8em;
     animation: rotate-left 55s infinite linear;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__text p.company-description {
+    font-size: 2.2rem;
   }
 }
 :root {
