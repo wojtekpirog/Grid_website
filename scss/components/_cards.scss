@@ -1,0 +1,79 @@
+@use "../utilities/colors";
+
+.cards {
+  background-color: colors.$darker;
+  overflow: hidden;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2em;
+    padding: 6em 2em;
+  }
+
+  &__card {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    padding: 3em;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: colors.$dark;
+    transition: background-color 300ms ease, border-color 300ms ease;
+    z-index: 2;
+
+    &:hover {
+      background-color: transparent;
+      border-color: colors.$gold;
+      z-index: 1;
+
+      &::before {
+        animation: pulse 1s;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid colors.$gold;
+      border-radius: inherit;
+      opacity: 0;
+    }
+
+    img {
+      margin-bottom: 1.4em;
+    }
+
+    h3 {
+      margin-bottom: .6em;
+      font-family: var(--second-font-bold);
+      font-size: 2.2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: var(--second-font-regular);
+    }
+
+    &--one, &--two, &--three {
+      grid-column: 1 / -1;
+    }
+
+    &--one {
+      grid-row: 1 / 2;
+    }
+
+    &--two {
+      grid-row: 2 / 3;
+    }
+
+    &--three {
+      grid-row: 3 / 4;
+    }
+  }
+}

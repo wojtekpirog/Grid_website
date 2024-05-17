@@ -278,6 +278,72 @@ body {
   display: none;
 }
 
+.cards {
+  background-color: #191919;
+  overflow: hidden;
+}
+.cards__container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2em;
+  padding: 6em 2em;
+}
+.cards__card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding: 3em;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #232323;
+  transition: background-color 300ms ease, border-color 300ms ease;
+  z-index: 2;
+}
+.cards__card:hover {
+  background-color: transparent;
+  border-color: #d6c78e;
+  z-index: 1;
+}
+.cards__card:hover::before {
+  animation: pulse 1s;
+}
+.cards__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d6c78e;
+  border-radius: inherit;
+  opacity: 0;
+}
+.cards__card img {
+  margin-bottom: 1.4em;
+}
+.cards__card h3 {
+  margin-bottom: 0.6em;
+  font-family: var(--second-font-bold);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.cards__card p {
+  font-family: var(--second-font-regular);
+}
+.cards__card--one, .cards__card--two, .cards__card--three {
+  grid-column: 1/-1;
+}
+.cards__card--one {
+  grid-row: 1/2;
+}
+.cards__card--two {
+  grid-row: 2/3;
+}
+.cards__card--three {
+  grid-row: 3/4;
+}
+
 @media screen and (min-width: 768px) {
   .burger-btn {
     top: 40px;
