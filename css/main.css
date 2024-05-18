@@ -344,6 +344,30 @@ body {
   grid-row: 3/4;
 }
 
+div.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 576px) {
+  .cards__container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10em 2em;
+  }
+  .cards__card {
+    grid-row: 1/2;
+  }
+  .cards__card--one {
+    grid-column: 1/2;
+  }
+  .cards__card--two {
+    grid-column: 2/3;
+  }
+  .cards__card--three {
+    grid-column: 3/4;
+  }
+}
 @media screen and (min-width: 768px) {
   .burger-btn {
     top: 40px;

@@ -1,0 +1,23 @@
+@media screen and (min-width: 576px) {
+  // Cards section
+  .cards {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 10em 2em;
+    }
+
+    &__card {
+      grid-row: 1 / 2;
+
+      &--one {
+        grid-column: 1 / 2;
+      }
+      &--two {
+        grid-column: 2 / 3;
+      }
+      &--three {
+        grid-column: 3 / 4;
+      }
+    }
+  }
+}
