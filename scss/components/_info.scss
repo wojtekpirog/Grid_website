@@ -1,0 +1,64 @@
+@use "../utilities/colors";
+
+.info {
+  position: relative;
+  display: grid;
+  grid-template-areas: 
+    "title title title"
+    "box box box"
+    "box box box";
+  padding: 6em 2em;
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__boxes {
+    grid-area: box;
+  }
+
+  &__box {
+    &-img {
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(.75) sepia();
+    }
+    &-title {
+      margin: .5rem 0;
+      color: colors.$gold;
+      font-size: 2.8rem;
+      font-family: var(--second-font-extralight);
+    }
+    &-text {
+      margin-bottom: .5em;
+      font-family: var(--second-font-light);
+    }
+    &-link {
+      display: block;
+      position: relative;
+      margin-bottom: 2em;
+      color: colors.$gold;
+      text-decoration: none;
+      text-align: right;
+      transition: color 300ms ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -.25rem;
+        width: 13.1%;
+        height: 2px;
+        background-color: colors.$gold;
+      }
+
+      &:hover {
+        color: colors.$darkgold;
+      }
+    }
+  }
+
+  &__bg-icon {
+    display: none;
+  }
+}
