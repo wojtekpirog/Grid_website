@@ -20,4 +20,63 @@
       }
     }
   }
+  // Info section
+  .info {
+    grid-template-areas:
+      "title box"
+      "title box"
+      "title box";
+
+    &__title {
+      padding: 0 2em;
+
+      .section-title {
+        line-height: 1;
+      }
+    }
+    
+    &__box {
+      display: grid;
+      justify-content: end;
+
+      &-img, &-text {
+        max-width: 500px;
+      }
+    }
+
+    &__bg-icon {
+      display: block;
+      position: absolute;
+      opacity: .1;
+      z-index: -1;
+
+      &--one {
+        top: 12%;
+        left: 20%;
+        width: 15%;
+        animation: rotate-right 55s infinite;
+      }
+
+      &--two {
+        bottom: 10%;
+        left: 10%;
+        width: 30%;
+        animation: rotate-left 30s infinite;
+      }
+
+      &--three {
+        top: 26%;
+        left: 30%;
+        width: 40%;
+        animation: heartbeat 25s infinite linear;
+      }
+
+      &--four {
+        top: 55%;
+        left: 10%;
+        width: 20%;
+        animation: rotate-right 40s infinite linear;
+      }
+    }
+  }
 }

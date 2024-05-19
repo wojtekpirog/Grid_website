@@ -4,9 +4,9 @@
   position: relative;
   display: grid;
   grid-template-areas: 
-    "title title title"
-    "box box box"
-    "box box box";
+    "title"
+    "box"
+    "box";
   padding: 6em 2em;
 
   &__title {
@@ -20,17 +20,18 @@
   &__box {
     &-img {
       width: 100%;
+      margin-bottom: .8em;
       object-fit: cover;
       filter: brightness(.75) sepia();
     }
     &-title {
-      margin: .5rem 0;
+      margin-bottom: .8rem;
       color: colors.$gold;
       font-size: 2.8rem;
       font-family: var(--second-font-extralight);
     }
     &-text {
-      margin-bottom: .5em;
+      margin-bottom: .8em;
       font-family: var(--second-font-light);
     }
     &-link {
