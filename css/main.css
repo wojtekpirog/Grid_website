@@ -132,6 +132,10 @@ h2.section-title span {
   font-family: var(--second-font-black);
 }
 
+.section-padding {
+  padding: 6em 2em;
+}
+
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -327,7 +331,6 @@ h2.section-title span {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   gap: 2em;
-  padding: 6em 2em;
 }
 .cards__card {
   position: relative;
@@ -389,7 +392,6 @@ h2.section-title span {
   position: relative;
   display: grid;
   grid-template-areas: "title" "box" "box";
-  padding: 6em 2em;
 }
 .info__title {
   grid-area: title;
@@ -439,10 +441,71 @@ h2.section-title span {
   display: none;
 }
 
+.plans {
+  background-color: #191919;
+  overflow: hidden;
+}
+.plans__container {
+  padding: 1em 0;
+  text-align: center;
+}
+.plans__box {
+  position: relative;
+  margin: 2em 0;
+  padding: 1em;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #232323;
+  transition: background-color 300ms ease, border-color 300ms ease;
+  z-index: 2;
+}
+.plans__box:last-child {
+  margin-bottom: 0;
+}
+.plans__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d6c78e;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.plans__box:hover {
+  background-color: transparent;
+  border-color: #d6c78e;
+  z-index: 1;
+}
+.plans__box:hover::before {
+  animation: pulse 1s;
+}
+.plans__item {
+  margin: 1em 0;
+}
+.plans__item-icon {
+  margin: 1em 0;
+  width: 65px;
+}
+.plans__item-name {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  color: #d6c78e;
+  font-size: 2rem;
+}
+.plans__item-value {
+  font-family: var(--second-font-light);
+  font-size: 1.8rem;
+}
+
 @media screen and (min-width: 576px) {
+  .cards {
+    padding: 10em 2em;
+  }
   .cards__container {
     grid-template-columns: repeat(3, 1fr);
-    padding: 10em 2em;
   }
   .cards__card {
     grid-row: 1/2;
@@ -500,13 +563,31 @@ h2.section-title span {
     top: 55%;
     left: 10%;
     width: 20%;
-    animation: rotate-right 40s infinite linear;
+    animation: rotate-right 8s infinite linear;
   }
 }
+.footer {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .burger-btn {
     top: 40px;
     right: 40px;
+  }
+  .plans {
+    padding: 8em 2em;
+  }
+  .plans__box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+  .plans__item {
+    margin: 1em 0;
+  }
+  .plans__item-icon {
+    width: 40px;
   }
 }
 @media screen and (min-width: 992px) {

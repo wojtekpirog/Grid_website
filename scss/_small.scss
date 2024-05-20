@@ -1,9 +1,10 @@
 @media screen and (min-width: 576px) {
   // Cards section
   .cards {
+    padding: 10em 2em;
+
     &__container {
       grid-template-columns: repeat(3, 1fr);
-      padding: 10em 2em;
     }
 
     &__card {
@@ -75,8 +76,12 @@
         top: 55%;
         left: 10%;
         width: 20%;
-        animation: rotate-right 40s infinite linear;
+        animation: rotate-right 8s infinite linear;
       }
     }
   }
+}
+
+.footer {
+  display: none;
 }
