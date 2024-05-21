@@ -1,0 +1,13 @@
+@use "../utilities/colors";
+
+.footer {
+  padding: 3em 1em;
+  border-top: 2px solid colors.$darker;
+  border-bottom: 2px solid colors.$darker;
+
+  &__bottom-text {
+    text-align: center;
+    font-family: var(--second-font-regular);
+    font-size: 2rem;
+  }
+}

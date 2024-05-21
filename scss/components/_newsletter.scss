@@ -1,0 +1,53 @@
+@use "../utilities/colors";
+
+.newsletter {
+  background-color: colors.$red;
+
+  .section-title {
+    color: colors.$white;
+    font-size: 2.8rem;
+
+    &::before {
+      bottom: -.75rem;
+      background-color: colors.$white;
+    }
+  }
+
+  &__form-input {
+    display: block;
+    width: 80%;
+    margin: 0 auto 1em;
+    padding: 1em;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: colors.$dark;
+    font-size: 1.8rem;
+    font-family: var(--second-font-regular);
+
+    &:focus {
+      outline: none;
+      border-color: colors.$dark;
+    }
+  }
+
+  &__form-button {
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+    border: 2px solid colors.$white;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-family: var(--second-font-regular);
+    background-color: transparent;
+    color: colors.$white;
+    cursor: pointer;
+    transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+  
+    &:hover {
+      background-color: colors.$gold;
+      border-color: colors.$gold;
+      color: colors.$dark;
+    }
+  }
+}
+

@@ -115,4 +115,30 @@
   .info {
     padding: 10em 2em;
   }
+    // Newsletter section
+  .newsletter {
+    &.section-padding {
+      padding: 8em 2em;
+    }
+    .section-title {
+      margin-bottom: 0;
+    }
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    &__form {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+
+      &-input {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // Gallery
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
