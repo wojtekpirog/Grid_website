@@ -594,6 +594,7 @@ h2.section-title span {
   max-width: 100%;
   width: 100%;
   min-width: 100%;
+  margin-bottom: 0.25em;
 }
 .contact__form-input:focus, .contact__form-textarea:focus {
   outline: none;
@@ -603,6 +604,11 @@ h2.section-title span {
   height: 140px;
   min-height: 140px;
   max-height: 240px;
+}
+.contact__form-error {
+  display: none;
+  font-family: var(--second-font-regular);
+  color: #A01C35;
 }
 .contact__form-btn {
   padding: 1em;
