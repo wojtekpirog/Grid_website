@@ -18,3 +18,13 @@
   border: 2px solid colors.$darkgold;
   opacity: 0;
 }
+
+@mixin formControls($padding) {
+  display: block;
+  margin: 0 auto 1em;
+  padding: 1em;
+  border: 2px solid colors.$white;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-family: var(--second-font-regular);  
+}
