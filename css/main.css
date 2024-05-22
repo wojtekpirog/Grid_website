@@ -225,7 +225,7 @@ h2.section-title span {
   list-style-type: none;
 }
 .header .nav-mobile {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
