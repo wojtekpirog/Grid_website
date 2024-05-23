@@ -41,6 +41,7 @@ const handleFormSubmit = (event) => {
 
   checkFormControls(formControls);
   checkLength(formControls);
+  checkEmail(userEmail);
 }
 
 const checkFormControls = (formControls) => {
@@ -59,6 +60,16 @@ const checkLength = (formControls) => {
       displayError(control.input, `${control.input.name.charAt(0).toUpperCase() + control.input.name.slice(1)} must be at least ${control.minLength} characters long!`);
     }
   });
+}
+
+const checkEmail = (userEmail) => {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  
+  if (!emailRegex.test(userEmail.value)) {
+    displayError(userEmail, "Invalid email address!");
+  } else {
+    hideError(userEmail);
+  }
 }
 
 const displayError = (input, message) => {
